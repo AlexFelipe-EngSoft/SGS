@@ -5,14 +5,17 @@
  */
 package br.ufc.sgs.model.usuarios;
 
+import br.ufc.sgs.model.exceptions.DadoInvalidoException;
+
 /**
  *
  * @author alexf
  */
-public class Avaliador extends Usuario{
+public class Avaliador extends Usuario implements InterResponsavel{
     
-    public Avaliador(String nome, String email, String senha) {
+    public Avaliador(String nome, String email, String senha) throws DadoInvalidoException {
         super(nome, email, senha);
     }
+    
     
 }

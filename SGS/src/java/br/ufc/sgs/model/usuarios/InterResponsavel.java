@@ -5,16 +5,10 @@
  */
 package br.ufc.sgs.model.usuarios;
 
-import br.ufc.sgs.model.exceptions.DadoInvalidoException;
-
 /**
  *
  * @author alexf
  */
-public class Gerente extends Usuario implements InterResponsavel{
-    
-    public Gerente(String nome, String email, String senha) throws DadoInvalidoException {
-        super(nome, email, senha);
-    }
+public interface InterResponsavel {
     
 }
