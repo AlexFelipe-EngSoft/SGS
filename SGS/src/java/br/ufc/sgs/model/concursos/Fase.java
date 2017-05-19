@@ -18,6 +18,14 @@ public class Fase {
     private LocalDate dataTermino;
     private CriterioDeSelecao criterioDeSelecao;
 
+    public Fase(String titulo, String descricao, LocalDate dataInicio, LocalDate dataTermino, CriterioDeSelecao criterioDeSelecao) {
+        setTitulo(titulo);
+        setDescricao(descricao);
+        setDataInicio(dataInicio);
+        setDataTermino(dataTermino);
+        setCriterioDeSelecao(criterioDeSelecao);
+    }
+
     public String getTitulo() {
         return titulo;
     }

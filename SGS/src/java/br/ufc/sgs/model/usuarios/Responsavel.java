@@ -9,6 +9,6 @@ package br.ufc.sgs.model.usuarios;
  *
  * @author alexf
  */
-public interface InterResponsavel {
+public interface Responsavel {
     
 }

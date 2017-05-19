@@ -10,10 +10,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>SGS - Sistema de Gerenciamento de Seleções</title>
-        <link rel="shortcut icon" href="../img/brasao.ico" />
-        <link rel='stylesheet' href='../css/default.css'/>
-        <link rel='stylesheet' href='../css/inputs.css'/>
-        <link rel='stylesheet' href='../css/struct.css'/>
+        <link rel="shortcut icon" href="img/brasao.ico" />
+        <link rel='stylesheet' href='css/default.css'/>
+        <link rel='stylesheet' href='css/inputs.css'/>
+        <link rel='stylesheet' href='css/struct.css'/>
     </head>
     <body>
         <div id='div_content'>

@@ -5,7 +5,7 @@
  */
 package br.ufc.sgs.model.concursos;
 
-import br.ufc.sgs.model.usuarios.Usuario;
+import br.ufc.sgs.model.usuarios.Responsavel;
 import java.util.Collection;
 
 /**
@@ -15,12 +15,12 @@ import java.util.Collection;
 public class Selecao {
     private String titulo;
     private String descricao;
-    private Usuario responsavel;
+    private Responsavel responsavel;
     private int vagasRemuneradas;
     private int vagasVoluntarias;
     private Collection<FaseDaSelecao> fase;
 
-    public Selecao(String titulo, String descricao, Usuario responsavel, int vagasRemuneradas, int vagasVoluntarias, Collection<FaseDaSelecao> fase) {
+    public Selecao(String titulo, String descricao, Responsavel responsavel, int vagasRemuneradas, int vagasVoluntarias, Collection<FaseDaSelecao> fase) {
         setTitulo(titulo);
         setDescricao(descricao);
         setResponsavel(responsavel);
@@ -47,11 +47,11 @@ public class Selecao {
         this.descricao = descricao;
     }
 
-    public Usuario getResponsavel() {
+    public Responsavel getResponsavel() {
         return responsavel;
     }
 
-    public void setResponsavel(Usuario responsavel) {
+    public void setResponsavel(Responsavel responsavel) {
         this.responsavel = responsavel;
     }
 

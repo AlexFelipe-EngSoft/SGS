@@ -14,20 +14,20 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  *
- * @author alexf
+ * @author Lavínia
  */
-public class DocumentoDAO extends ExecutaSQL{
+public class EditalDAO extends ExecutaSQL{
     
-    public DocumentoDAO(Connection conexao) {
+    public EditalDAO(Connection conexao) {
         super(conexao);
     }
+    
     public boolean insertFile( File f ){
         try {
-            PreparedStatement ps = getConexao().prepareStatement("INSERT INTO documento(nome, arquivo ) VALUES (?, ? )");
+            PreparedStatement ps = getConexao().prepareStatement("INSERT INTO edital(nome, arquivo ) VALUES (?, ? )");
 
             //converte o objeto file em array de bytes
             InputStream is = new FileInputStream( f );
@@ -53,7 +53,7 @@ public class DocumentoDAO extends ExecutaSQL{
     public File getFile( int id ){
         File f = null;
         try {
-            PreparedStatement ps = getConexao().prepareStatement("SELECT id, nome, arquivo FROM documento WHERE id = ?");
+            PreparedStatement ps = getConexao().prepareStatement("SELECT id, nome, arquivo FROM edital WHERE id = ?");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if ( rs.next() ){
@@ -77,35 +77,5 @@ public class DocumentoDAO extends ExecutaSQL{
         }
     return null;
     }    
-
-    public ArrayList<File> getAllDocumentosConcurso(int id) {
-        ArrayList<File> arrayF = new ArrayList<>();
-        File f = null;
-        try {
-            PreparedStatement ps = getConexao().prepareStatement("SELECT id, nome, arquivo FROM documento WHERE id_concurso = ?");
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
-            while( rs.next() ){
-                byte [] bytes = rs.getBytes("arquivo");
-                String nome = rs.getString("nome");
-
-                //converte o array de bytes em file
-                f = new File( "C:\\Users\\alexf\\Desktop\\Teste\\" + nome );
-                FileOutputStream fos = new FileOutputStream(f);
-                fos.write( bytes );
-                fos.close();
-                arrayF.add(f);
-            }
-            rs.close();
-            ps.close();
-            return arrayF;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        return null;
-    }
     
 }
