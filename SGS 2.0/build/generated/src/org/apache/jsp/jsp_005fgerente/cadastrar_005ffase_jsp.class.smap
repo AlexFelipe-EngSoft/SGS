@@ -1,0 +1,19 @@
+SMAP
+cadastrar_005ffase_jsp.java
+JSP
+*S JSP
+*F
++ 0 cadastrar_fase.jsp
+jsp_gerente/cadastrar_fase.jsp
++ 1 cabecalho.jsp
+jsp_gerente/cabecalho.jsp
++ 2 lateral.jsp
+jsp_gerente/lateral.jsp
+*L
+1,61:59
+1#1,14:120
+14,18:134
+61#0,62:151
+1#2,40:213
+122#0,18:252
+*E

@@ -1,0 +1,6 @@
+br.ufc.sgs.controle
+br.ufc.sgs.dao
+br.ufc.sgs.model.concurso
+br.ufc.sgs.model.concursos.criteriosDeSelecao
+br.ufc.sgs.model.exceptions
+br.ufc.sgs.modelo.usuario
